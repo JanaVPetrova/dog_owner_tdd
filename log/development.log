@@ -5955,3 +5955,521 @@ ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ic
 
 
   Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-05-15 02:21:30 +0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IbTANpNmtpbdP6dYyKdTygH1ecJ2tYFPDMBr/AzGLWA="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-15 02:21:30 +0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fb.png" for 127.0.0.1 at 2013-05-15 02:21:30 +0400
+Served asset /fb.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vk.png" for 127.0.0.1 at 2013-05-15 02:21:30 +0400
+Served asset /vk.png - 304 Not Modified (0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:21:30 +0400
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2013-05-15 02:21:33 +0400
+
+
+Started GET "/users/auth/facebook/callback?code=AQDOjMMU2gXHbYbfZE4Z_npLskocg1OBve6CI8e9UirAvBVIg2Jjtiyi2M-CXwEY2_CB2-GrI4Mz7R26C6oWcETS4xxZPLGKdbzfuu-U1218FEu1yVLQ8jqJtAxQGXuNkXg6PRa12UxFnp2EloUUVDtvpoV9SjUxdyJ03rAaTcAxiAp0nlJy2Be3L_KUKU8OjeA-ekM3nbKXLv6fxPJ7PJVRi6J_tWItQTiMrAnxX8XBLzmWphZpunh5i__zaVQNmUOCBlTjO_PcWryu7chvvqEpwD1kC8u3cLqpBjUa9_jus-W-m2DsrRHNWMCiMo9u6fc" for 127.0.0.1 at 2013-05-15 02:21:34 +0400
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDOjMMU2gXHbYbfZE4Z_npLskocg1OBve6CI8e9UirAvBVIg2Jjtiyi2M-CXwEY2_CB2-GrI4Mz7R26C6oWcETS4xxZPLGKdbzfuu-U1218FEu1yVLQ8jqJtAxQGXuNkXg6PRa12UxFnp2EloUUVDtvpoV9SjUxdyJ03rAaTcAxiAp0nlJy2Be3L_KUKU8OjeA-ekM3nbKXLv6fxPJ7PJVRi6J_tWItQTiMrAnxX8XBLzmWphZpunh5i__zaVQNmUOCBlTjO_PcWryu7chvvqEpwD1kC8u3cLqpBjUa9_jus-W-m2DsrRHNWMCiMo9u6fc"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."url" = 'http://www.facebook.com/janavpetrova' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-05-14 20:22:33.776871', "current_sign_in_at" = '2013-05-14 22:21:35.286927', "sign_in_count" = 5, "updated_at" = '2013-05-14 22:21:35.288189' WHERE "users"."id" = 3[0m
+  [1m[35m (141.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms (ActiveRecord: 142.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-15 02:21:35 +0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered users/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:21:35 +0400
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-05-15 02:21:45 +0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.haml within layouts/application (64.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:21:45 +0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-05-15 02:21:58 +0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Z6OA6uEvqDCAA0uivq+ad7+s3XyuAY41a7vfnHbyHo=", "post"=>{"pet_name"=>"", "info"=>"", "fplace"=>"", "fdate(1i)"=>"2013", "fdate(2i)"=>"5", "fdate(3i)"=>"14", "contacts(1i)"=>"2013", "contacts(2i)"=>"5", "contacts(3i)"=>"14", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00000003d98ac0 @original_filename="rails.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"rails.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130515-20730-4qy4x7>>}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::MultiparameterAssignmentErrors (1 error(s) on assignment of multiparameter attributes):
+  app/controllers/posts_controller.rb:43:in `new'
+  app/controllers/posts_controller.rb:43:in `create'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/posts/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:22:29 +0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-05-15 02:23:09 +0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Z6OA6uEvqDCAA0uivq+ad7+s3XyuAY41a7vfnHbyHo=", "post"=>{"pet_name"=>"qwertyu", "info"=>"qwertui", "fplace"=>"qwertui", "fdate(1i)"=>"2013", "fdate(2i)"=>"5", "fdate(3i)"=>"14", "contacts(1i)"=>"2013", "contacts(2i)"=>"5", "contacts(3i)"=>"14", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000000441c590 @original_filename="fb.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"fb.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130515-20730-116y6ck>>}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::MultiparameterAssignmentErrors (1 error(s) on assignment of multiparameter attributes):
+  app/controllers/posts_controller.rb:43:in `new'
+  app/controllers/posts_controller.rb:43:in `create'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-05-15 02:23:24 +0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.haml within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:23:25 +0400
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-05-15 02:23:26 +0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.haml within layouts/application (61.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:23:26 +0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-05-15 02:23:45 +0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Z6OA6uEvqDCAA0uivq+ad7+s3XyuAY41a7vfnHbyHo=", "post"=>{"pet_name"=>"qwertyu", "info"=>"qwerty", "fplace"=>"qwertyu", "fdate(1i)"=>"2013", "fdate(2i)"=>"5", "fdate(3i)"=>"14", "contacts"=>"qwertyu", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00000004169eb0 @original_filename="vk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"vk.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130515-20730-13dbb84>>}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["contacts", "qwertyu"], ["created_at", Tue, 14 May 2013 22:23:45 UTC +00:00], ["fdate", Tue, 14 May 2013], ["fplace", "qwertyu"], ["info", "qwerty"], ["pet_name", "qwertyu"], ["photo", #<ActionDispatch::Http::UploadedFile:0x00000004169eb0 @original_filename="vk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"vk.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130515-20730-13dbb84>>], ["status", nil], ["updated_at", Tue, 14 May 2013 22:23:45 UTC +00:00]]
+NoMethodError: undefined method `name' for nil:NilClass: INSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 10ms
+
+ActiveRecord::StatementInvalid (NoMethodError: undefined method `name' for nil:NilClass: INSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:46:in `block in create'
+  app/controllers/posts_controller.rb:45:in `create'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120412181310)
+Migrating to AddDeviseToUsers (20120412181355)
+Migrating to CreatePosts (20130514212140)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("posts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-05-15 02:28:00 +0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.haml within layouts/application (2.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 114ms (Views: 98.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:28:00 +0400
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-05-15 02:28:01 +0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.haml within layouts/application (20.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 37ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:28:01 +0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-05-15 02:28:16 +0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Z6OA6uEvqDCAA0uivq+ad7+s3XyuAY41a7vfnHbyHo=", "post"=>{"pet_name"=>"qwertyu", "info"=>"qwertui", "fplace"=>"qwertui", "fdate(1i)"=>"2013", "fdate(2i)"=>"5", "fdate(3i)"=>"14", "contacts"=>"qwerty", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000000030f8cc0 @original_filename="vk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"vk.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130515-22427-llgu6n>>}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (7.1ms)[0m  [1mINSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["contacts", "qwerty"], ["created_at", Tue, 14 May 2013 22:28:16 UTC +00:00], ["fdate", Tue, 14 May 2013], ["fplace", "qwertui"], ["info", "qwertui"], ["pet_name", "qwertyu"], ["photo", #<ActionDispatch::Http::UploadedFile:0x000000030f8cc0 @original_filename="vk.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[photo]\"; filename=\"vk.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<Tempfile:/tmp/RackMultipart20130515-22427-llgu6n>>], ["status", nil], ["updated_at", Tue, 14 May 2013 22:28:16 UTC +00:00]]
+NoMethodError: undefined method `name' for nil:NilClass: INSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::StatementInvalid (NoMethodError: undefined method `name' for nil:NilClass: INSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)):
+  app/controllers/posts_controller.rb:46:in `block in create'
+  app/controllers/posts_controller.rb:45:in `create'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-05-15 02:29:24 +0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.haml within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:29:24 +0400
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-05-15 02:29:26 +0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.haml within layouts/application (10.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:29:26 +0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-05-15 02:29:40 +0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Z6OA6uEvqDCAA0uivq+ad7+s3XyuAY41a7vfnHbyHo=", "post"=>{"pet_name"=>"qwertyu", "info"=>"qwertui", "fplace"=>"qwertui", "fdate(1i)"=>"2013", "fdate(2i)"=>"5", "fdate(3i)"=>"14", "contacts"=>"qwerty", "photo"=>"xcvghn"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("contacts", "created_at", "fdate", "fplace", "info", "pet_name", "photo", "status", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["contacts", "qwerty"], ["created_at", Tue, 14 May 2013 22:29:40 UTC +00:00], ["fdate", Tue, 14 May 2013], ["fplace", "qwertui"], ["info", "qwertui"], ["pet_name", "qwertyu"], ["photo", "xcvghn"], ["status", nil], ["updated_at", Tue, 14 May 2013 22:29:40 UTC +00:00]]
+  [1m[35m (150.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 158ms (ActiveRecord: 151.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2013-05-15 02:29:41 +0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template posts/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/home/vencarbon/projects/dog_owner_tdd/app/views"
+  * "/home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/devise-2.0.4/app/views"
+):
+  app/controllers/posts_controller.rb:18:in `show'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2013-05-15 02:32:35 +0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.haml within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00000002f2e688>:0x000000031503d0>):
+    1: .field
+    2:   = f.label :pet_name
+    3:   = @post.pet_name
+    4: .field
+    5:   = f.label :info
+  app/views/posts/show.html.haml:2:in `_app_views_posts_show_html_haml__4378488007806248553_25868660'
+  app/controllers/posts_controller.rb:18:in `show'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2013-05-15 02:33:05 +0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/show.html.haml within layouts/application (2.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/images/favicon.ico" for 127.0.0.1 at 2013-05-15 02:33:06 +0400
+
+ActionController::RoutingError (No route matches [GET] "/posts/images/favicon.ico"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vencarbon/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vencarbon/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
