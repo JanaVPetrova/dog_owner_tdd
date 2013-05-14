@@ -1,0 +1,8 @@
+- if !user_signed_in?
+  .container
+    .content{:align => 'center'}
+      %h1 Registration
+      .well.sidebar-nav
+        %ul.nav.nav-list
+          = link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook)
+          = link_to image_tag('vk.png'), user_omniauth_authorize_path(:vkontakte)
