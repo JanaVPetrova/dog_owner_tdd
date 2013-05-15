@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pet_name: MyString
+  info: MyText
+  photo: MyString
+  status: false
+  fplace: MyString
+  fdate: 2013-05-15
+  contacts: MyString
+
+two:
+  pet_name: MyString
+  info: MyText
+  photo: MyString
+  status: false
+  fplace: MyString
+  fdate: 2013-05-15
+  contacts: MyString
