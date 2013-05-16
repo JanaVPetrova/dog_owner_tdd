@@ -40,6 +40,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    params[:post][:status] = 'false'
     @post = Post.new(params[:post])
 
     respond_to do |format|
