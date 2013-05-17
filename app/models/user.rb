@@ -24,5 +24,30 @@ class User < ActiveRecord::Base
     end
   end
 
+  #
+  #"https://api.twitter.com/oauth/access_token"
+  def self.find_for_twitter_oauth access_token
+    if user = User.where(:url => access_token.info.urls.Twitter).first
+      user
+    else
+      User.create!(
+          :provider => access_token.provider,
+          :url => access_token.info.urls.Twitter,
+          :username => access_token.info.name,
+          :nickname => access_token.info.nickname,
+          :email => access_token.info.nickname+'@twitter.com',
+          :password => Devise.friendly_token[0,20],
+      )
+    end
+  end
+
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.name = auth["info"]["name"]
+    end
+  end
+
   has_many :posts
 end

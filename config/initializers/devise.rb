@@ -4,6 +4,7 @@ Devise.setup do |config|
 
   config.omniauth :facebook, '363765213737145', '32b6e6962c7e8064055b8ce74b6907f6'
   config.omniauth :vkontakte, '3646411', 'aQyLc8UpB9vSya6dHZhW'
+  config.omniauth :twitter, '2Ubjb1xwZeSpP2v11x5tQ', 'VgEkbn0Dclzgv1tHR6YJJLPxS8lDbHj7A3J9owc90q0'
 
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
@@ -26,4 +27,11 @@ Devise.setup do |config|
   config.reset_password_within = 6.hours
 
   config.sign_out_via = :delete
+
+  #require "openid/fetchers"
+  #OpenID.fetcher.ca_file = "/etc/ssl/certs/ca-certificates.crt"
+
+  OmniAuth.config.on_failure = Proc.new { |env|
+    OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+  }
 end
