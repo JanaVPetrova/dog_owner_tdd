@@ -31,8 +31,4 @@ class Users::OmniauthCallbacksController < ApplicationController
       redirect_to root_path
     end
   end
-
-  def failure
-    render :text => @user.to_yaml
-  end
 end
