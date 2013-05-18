@@ -28,6 +28,8 @@
               - if user_signed_in?
                 %li= link_to "#{current_user.username}", current_user
                 %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+                -if current_user.admin?
+                  %li= link_to "New Posts", "/admin"
                 = link_to content_tag(:button, 'Tell us!', :class => 'btn'), new_post_path
               - else
                 %li= link_to "Sign in", new_user_path

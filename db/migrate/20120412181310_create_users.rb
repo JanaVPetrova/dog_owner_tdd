@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :url
       t.string :uid
+      t.boolean :admin, :default => 'false'
 
       t.timestamps
     end
